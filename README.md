@@ -61,7 +61,7 @@ We recommend that you create new commits frequently when doing this project. If 
 We start by creating a Soduku solver that uses the same input and output format that we used in the first project. The first difference concerning the first project is that our new solver will receive only one file containing the input. You will write the code for this question in a new file named ```sudoku1.py``` that you need to create. 
 For instance, by running the following command
 ```bash
-python sudoku1.py instances/lp/ex00.lp
+u1.py instances/lp/ex00.python sudoklp
 ```
 the solver should print the output:
 ```
