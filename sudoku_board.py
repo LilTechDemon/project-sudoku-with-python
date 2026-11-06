@@ -25,7 +25,15 @@ class Sudoku:
     @classmethod
     def from_str(cls, s: str) -> "Sudoku":
         sudoku = {}
-        # YOUR CODE HERE
+        cells = s.split()
+        if len(cells) != 81:
+            raise ValueError(f"Expected 81 cells, got {len(cells)}")
+
+        for index, cell in enumerate(cells):
+            if cell != "-":
+                row, col = divmod(index, 9)
+                sudoku[(row + 1, col + 1)] = int(cell)
+
         return cls(sudoku)
 
     @classmethod
