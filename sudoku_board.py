@@ -8,7 +8,18 @@ class Sudoku:
 
     def __str__(self) -> str:
         s = ""
-        # YOUR CODE HERE
+        for x in range(1, 10):
+            for y in range(1, 10):
+                n = self.sudoku.get((x, y), 0)
+                s += str(n)
+                if y < 9:
+                    if y % 3 == 0:
+                        s += "  "
+                    else:
+                        s += " "
+            s += "\n"
+            if x % 3 == 0 and x != 9:
+                s += "\n"
         return s
 
     @classmethod
